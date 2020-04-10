@@ -16,24 +16,34 @@ class User extends Model {
 
 		$results = $sql->select("SELECT * FROM tb_users WHERE deslogin = :LOGIN", array(
 			":LOGIN"=>$login
-		)); 
-
+		));
+		/* var_dump($login);
+		//exit;
+		var_dump($password); 
+		//exit;
+		var_dump($results);*/
+		//exit; 
 		if (count($results) === 0)
 		{
 			throw new \Exception("Usuário inexistente ou senha inválida.");
 		}
 
 		$data = $results[0];
-
+		//var_dump($password); dado do formulário
+		//var_dump($data["despassword"]); dado de um campo no BD
+		//var_dump($data); array com os 6 chave / conteudo
+		//var_dump($results); objeto
+		//exit; 
 		if (password_verify($password, $data["despassword"]) === true)
 		{
 
 			$user = new User();
-
+			//chama um metodo magico para setar os dados do banco na variavel $user que eh um array
 			$user->setData($data);
 
 			$_SESSION[User::SESSION] = $user->getValues();
-
+			/* var_dump($user);
+			exit; */
 			return $user;
 
 		} else {
