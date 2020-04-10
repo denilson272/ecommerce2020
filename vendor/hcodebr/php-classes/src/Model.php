@@ -4,17 +4,15 @@ namespace Hcode;
 
 class Model {
 
-	private $values = []; // tem todos os campos do usuario caso objeto for usuario
+	private $values = [];
 
-	public function __call($name, $args) // metodo magico, nome do metodo e parametros
+	public function __call($name, $args)
 	{
 
-		$method = substr($name, 0, 3); // metodo get, ou set ?
-		$fieldName = substr($name, 3, strlen($name)); //nome do campo da terceira letra até o tamanho total dos ch
+		$method = substr($name, 0, 3);
+		$fieldName = substr($name, 3, strlen($name));
 
-		/* var_dump($method, $fieldName);
-		exit;
-		 */switch ($method)
+		switch ($method)
 		{
 
 			case "get":
