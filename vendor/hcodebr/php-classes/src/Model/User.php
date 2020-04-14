@@ -9,7 +9,6 @@ use \Hcode\Mailer;
 class User extends Model {
 
 	const SESSION = "User";
-	// A CHAVE DEVE SER SECRETA, NAO PODE ESTAR EXPOSTA NO GITHUB PUBLICO, SE A APLICAÇÃO FOSSE COMERCIAL.
 	const SECRET = "HcodePhp7_Secret";
 
 	public static function login($login, $password)
