@@ -1,5 +1,6 @@
 <?php 
 
+//todas as classes serão usadas neste arquivo php
 use \Hcode\Page;
 use \Hcode\Model\Product;
 use \Hcode\Model\Category;
@@ -9,12 +10,14 @@ use \Hcode\Model\User;
 use \Hcode\Model\Order;
 use \Hcode\Model\OrderStatus;
 
+
 $app->get('/', function() {
 
+	// ao entrar no raiz do site, executa uma chamada no banco de dados e lista todos os produtos
 	$products = Product::listAll();
-
+	// vou desenhar uma tela inicial
 	$page = new Page();
-
+	// chama a página index e como opções vai produtos
 	$page->setTpl("index", [
 		'products'=>Product::checkList($products)
 	]);

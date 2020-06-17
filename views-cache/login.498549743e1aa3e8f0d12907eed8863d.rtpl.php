@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="product-bit-title text-center">
-                    <h2>Autenticação</h2>
+                    <h2>AREA DE LOGIN XXX</h2>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@
 
 
                 <form action="/login" id="login-form-wrap" class="login" method="post">
-                    <h2>Acessar</h2>
+                    <h2>Acessar XXX</h2>
                     <p class="form-row form-row-first">
                         <label for="login">E-mail <span class="required">*</span>
                         </label>
@@ -64,12 +64,12 @@
                 <form id="register-form-wrap" action="/register" class="register" method="post">
                     <h2>Criar conta</h2>
                     <p class="form-row form-row-first">
-                        <label for="nome">Nome Completo <span class="required">*</span>
+                        <label for="nome">Nome TODINHO <span class="required">*</span>
                         </label>
                         <input type="text" id="nome" name="name" class="input-text" value="<?php echo htmlspecialchars( $registerValues["name"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                     </p>
                     <p class="form-row form-row-first">
-                        <label for="email">E-mail <span class="required">*</span>
+                        <label for="email">E-7/2 <span class="required">*</span>
                         </label>
                         <input type="email" id="email" name="email" class="input-text" value="<?php echo htmlspecialchars( $registerValues["email"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                     </p>
